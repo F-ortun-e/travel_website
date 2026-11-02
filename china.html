@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Great Wall of China</title>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif; background-color: rgb(20, 20, 20); padding: 20px;">
+     <div style="background-image: url(china.jpeg); background-size: cover; background-position: center; padding: 40px; border-radius: 10px; background-color: rgba(42, 42, 42, 0.6); background-blend-mode: darken;">
+    <h1 style='color: rgb(0, 209, 49); font-size: 50px;'>GREAT WALL OF CHINA</h1>
+    <p style="color: rgb(255, 255, 255);font-size: 20px;"><strong>Across the ridges of China, the endless spine of the Great Wall of China crawls across mountains like a sleeping dragon.<br>
+Built over several dynasties, with the most famous sections constructed during the Ming Dynasty (1368–1644), the Great Wall stretches over 13,000 miles (21,196 kilometers) across northern China.<br>
+Originally built to protect Chinese states and empires from invasions and raids by nomadic tribes, the wall also served as a means of border control, allowing for the imposition of duties on goods transported along the Silk Road, regulation of trade, and control of immigration and emigration.<br>  
+The Great Wall is not a single continuous wall but a series of walls and fortifications built by different dynasties over centuries, with some sections made of brick and stone, while others were constructed using tamped earth and wood.<br>
+Today, the Great Wall of China stands as a symbol of China's historical strength and resilience, attracting millions of visitors from around the world who come to marvel at its grandeur and historical significance.</strong></p>
+<div style="flex: 1; text-align: center; position: relative;">
+
+    <img id="gallery" src="china1.jpeg" style="width: 100%; border-radius: 10px;">
+
+    
+    <button onclick="prevImage()" style="
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    ">
+    ◀
+    </button>
+
+    
+    <button onclick="nextImage()" style="
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    ">
+    ▶
+    </button>
+
+</div>
+
+    <div style="flex: 1; background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(20,20,20,0.9)); padding: 30px; border-radius: 10px; color: white;">
+        
+        <h2 style="font-size: 35px; color: gold;">Explore the Wonder</h2>
+
+        <p style="font-size: 20px;">
+        5-star hotel stays<br>
+        Guided tours<br>
+        All entrance fees<br>
+        Daily breakfast<br>
+        Transportation<br>
+        </p>
+
+        <h1 style="font-size: 45px; color: rgb(0, 255, 30);">£1,999</h1>
+
+
+        <a href="bookingpage.html">
+            <button style="
+            padding: 15px 25px;
+            font-size: 20px;
+            background: linear-gradient(45deg, red, darkred);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            ">
+            Book Now
+            </button>
+        </a>
+
+    </div>
+
+</div>
+<script>
+var images = ["china1.jpeg", "china2.jpeg", "china3.jpeg", "china4.jpeg"];
+var index = 0;
+
+function showImage() {
+    document.getElementById("gallery").src = images[index];
+}
+
+function nextImage() {
+    index++;
+    if (index >= images.length) index = 0;
+    showImage();
+}
+
+function prevImage() {
+    index--;
+    if (index < 0) index = images.length - 1;
+    showImage();
+}
+</script>
+</body>
+</html>

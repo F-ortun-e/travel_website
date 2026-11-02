@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Christ the Redeemer</title>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif; background-color: rgb(20, 20, 20); padding: 20px;">
+    <div style="background-image: url('brazil.jpeg'); background-size: cover; background-position: center; padding: 40px; border-radius: 10px; background-color: rgba(42, 42, 42, 0.6); background-blend-mode: darken;">
+    <h1 style='color: rgb(0, 209, 49); font-size: 50px;'>CHRIST THE REDEEMER</h1>
+    <p style="color: rgb(255, 255, 255);font-size: 20px;"><strong>High above Brazil, Christ the Redeemer stretches open arms over a restless world.<br>
+Perched atop the Corcovado Mountain in Rio de Janeiro, Brazil, Christ the Redeemer is an iconic statue of Jesus Christ that stands as a symbol of Christianity and a cultural icon of Brazil.<br>
+Completed in 1931, the statue was designed by Brazilian engineer Heitor da Silva Costa and sculpted by French sculptor Paul Landowski.<br>
+Standing 30 meters (98 feet) tall, with an additional 8-meter (26-foot) pedestal, Christ the Redeemer's outstretched arms span 28 meters (92 feet), creating a powerful image of embrace and protection.<br>
+The statue is made of reinforced concrete and soapstone, chosen for their durability and resistance to weathering.<br>
+Christ the Redeemer has become a symbol of peace and a welcoming gesture to visitors from around the world, attracting millions of tourists each year who come to admire its grandeur and the breathtaking views of Rio de Janeiro from its vantage point on Corcovado Mountain.</strong></p>
+    <div style="flex: 1; text-align: center; position: relative;">
+
+    <img id="gallery" src="brazil1.jpeg" style="width: 100%; border-radius: 10px;">
+
+    
+    <button onclick="prevImage()" style="
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    ">
+    ◀
+    </button>
+
+    
+    <button onclick="nextImage()" style="
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    ">
+    ▶
+    </button>
+
+</div>
+
+    <div style="flex: 1; background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(20,20,20,0.9)); padding: 30px; border-radius: 10px; color: white;">
+        
+        <h2 style="font-size: 35px; color: gold;">Explore the Wonder</h2>
+
+        <p style="font-size: 20px;">
+        5-star hotel stays<br>
+        Guided tours<br>
+        All entrance fees<br>
+        Daily breakfast<br>
+        Transportation<br>
+        </p>
+
+        <h1 style="font-size: 45px; color: rgb(0, 255, 30);">£1,999</h1>
+
+
+        <a href="bookingpage.html">
+            <button style="
+            padding: 15px 25px;
+            font-size: 20px;
+            background: linear-gradient(45deg, red, darkred);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            ">
+            Book Now
+            </button>
+        </a>
+
+    </div>
+
+</div>
+<script>
+var images = ["brazil1.jpeg", "brazil2.jpeg", "brazil3.jpeg", "brazil4.jpeg"];
+var index = 0;
+
+function showImage() {
+    document.getElementById("gallery").src = images[index];
+}
+
+function nextImage() {
+    index++;
+    if (index >= images.length) index = 0;
+    showImage();
+}
+
+function prevImage() {
+    index--;
+    if (index < 0) index = images.length - 1;
+    showImage();
+}
+</script>
+</body> 
+</html>

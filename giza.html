@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Great Pyramid of Giza, Egypt</title>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif; background-color: rgb(20, 20, 20); padding: 20px;">
+    <div style="background-image: url(pyramids.jpeg); background-size: cover; background-position: center; padding: 40px; border-radius: 10px; background-color: rgba(42, 42, 42, 0.6); background-blend-mode: darken;">
+    <h1 style='color: rgb(0, 208, 31); font-size: 50px;'>GREAT PYRAMID OF GIZA</h1>
+    <p style="color: rgb(255, 255, 255);font-size: 20px;"><strong>In the sands of Egypt, the ancient watch of the Great Pyramid of Giza still stares down time itself.<br>
+Built as a tomb for the Pharaoh Khufu around 2560 BC, the Great Pyramid of Giza is the oldest and only surviving wonder of the original Seven Wonders of the Ancient World.<br>
+Rising to an original height of 146.6 meters (481 feet), it was the tallest man-made structure in the world for over 3,800 years.<br>
+Constructed from an estimated 2.3 million blocks of limestone and granite, the pyramid's precise alignment with the cardinal points and its complex internal chambers continue to fascinate archaeologists and historians.<br>
+The Great Pyramid stands as a testament to the ingenuity and skill of ancient Egyptian civilization, symbolizing their beliefs in the afterlife and their reverence for their pharaohs.<br>
+Today, it remains a powerful symbol of human achievement and a source of wonder for visitors from around the world.</strong></p>
+<div style="flex: 1; text-align: center; position: relative;">
+
+    <img id="gallery" src="giza1.jpeg" style="width: 100%; border-radius: 10px;">
+
+    
+    <button onclick="prevImage()" style="
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    ">
+    ◀
+    </button>
+
+    
+    <button onclick="nextImage()" style="
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    ">
+    ▶
+    </button>
+
+</div>
+
+    <div style="flex: 1; background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(20,20,20,0.9)); padding: 30px; border-radius: 10px; color: white;">
+        
+        <h2 style="font-size: 35px; color: gold;">Explore the Wonder</h2>
+
+        <p style="font-size: 20px;">
+        5-star hotel stays<br>
+        Guided tours<br>
+        All entrance fees<br>
+        Daily breakfast<br>
+        Transportation<br>
+        </p>
+
+        <h1 style="font-size: 45px; color: #00ff11;">£1,999</h1>
+
+
+        <a href="bookingpage.html">
+            <button style="
+            padding: 15px 25px;
+            font-size: 20px;
+            background: linear-gradient(45deg, red, darkred);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            ">
+            Book Now
+            </button>
+        </a>
+
+    </div>
+
+</div>
+<script>
+var images = ["giza1.jpeg", "giza2.jpeg", "giza3.jpeg", "giza4.jpeg"];
+var index = 0;
+
+function showImage() {
+    document.getElementById("gallery").src = images[index];
+}
+
+function nextImage() {
+    index++;
+    if (index >= images.length) index = 0;
+    showImage();
+}
+
+function prevImage() {
+    index--;
+    if (index < 0) index = images.length - 1;
+    showImage();
+}
+</script>
+</body> 
+</html>

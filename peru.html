@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machu Picchu,Peru</title>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif; background-color: rgb(20, 20, 20); padding: 20px;">
+    <div style="background-image: url('machu.jpeg'); background-size: cover; background-position: center; padding: 40px; border-radius: 10px; background-color: rgba(42, 42, 42, 0.6); background-blend-mode: darken;">
+
+    <h1 style='color: rgb(0, 208, 49); font-size: 50px;'>MACHU PICCHU, PERU</h1>
+    <p style="color: rgb(255, 255, 255);font-size: 20px;"><strong>Above the clouds of the Andes, Machu Picchu clings to the mountains like a secret.<br>
+    Perched high in the Andes Mountains of Peru, Machu Picchu is an ancient Incan citadel that was built in the 15th century and abandoned just a century later.<br>
+    The site is renowned for its sophisticated dry-stone construction and its stunning views of the surrounding landscape.<br>
+    Machu Picchu is considered one of the most important archaeological sites in South America and a symbol of Incan civilization.<br>
+    Today, it attracts millions of visitors from around the world who come to admire its beauty and learn about its rich history.</strong></p>
+        <div style="flex: 1; text-align: center; position: relative;">
+
+    <img id="gallery" src="peru1.jpeg" style="width: 100%; border-radius: 10px;">
+
+    
+    <button onclick="prevImage()" style="
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    ">
+    ◀
+    </button>
+
+    
+    <button onclick="nextImage()" style="
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    ">
+    ▶
+    </button>
+
+</div>
+    <div style="flex: 1; background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(20,20,20,0.9)); padding: 30px; border-radius: 10px; color: white;">
+        
+        <h2 style="font-size: 35px; color: gold;">Explore the Wonder</h2>
+
+        <p style="font-size: 20px;">
+        5-star hotel stays<br>
+        Guided tours<br>
+        All entrance fees<br>
+        Daily breakfast<br>
+        Transportation<br>
+        </p>
+
+        <h1 style="font-size: 45px; color: rgb(0, 255, 30);">£1,999</h1>
+
+
+        <a href="bookingpage.html">
+            <button style="
+            padding: 15px 25px;
+            font-size: 20px;
+            background: linear-gradient(45deg, red, darkred);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            ">
+            Book Now
+            </button>
+        </a>
+
+    </div>
+    <script>
+var images = ["peru1.jpeg", "peru2.jpeg", "peru3.jpeg", "peru4.jpeg"];
+var index = 0;
+
+function showImage() {
+    document.getElementById("gallery").src = images[index];
+}
+
+function nextImage() {
+    index++;
+    if (index >= images.length) index = 0;
+    showImage();
+}
+
+function prevImage() {
+    index--;
+    if (index < 0) index = images.length - 1;
+    showImage();
+}
+</script>
+</body> 
+</html>
